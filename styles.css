@@ -5,12 +5,10 @@ html, body {
 	font-family: 'Open Sans', sans-serif;
 	/*font-family: 'Roboto Condensed', sans-serif;*/
 	/*font-family: 'Source Sans Pro', sans-serif;*/
-
-
 }
 
 #container {
-	height: 100%;
+	width: 100%;
 }
 
 /* HERO IMAGE */
@@ -50,6 +48,7 @@ html, body {
 	text-shadow: 2px 2px #1B242F;
 	animation: down-bounce 2s infinite;
 	transition: 0.4s color;
+	cursor: pointer;
 }
 
 #hero i:hover {
@@ -114,8 +113,9 @@ nav div ul li:hover {
 
 /* ABOUT */
 
-#about {
+.wrapper {
 	display: flex;
+	width: 100%;
 	justify-content: space-around;
 	flex-flow: row wrap;
 	padding: 90px 0;
@@ -127,9 +127,9 @@ nav div ul li:hover {
 	margin-bottom: 80px;
 	font-size: 35px;
 	font-weight: 700;
-	transform: translateY(-100px);
-	opacity: 0;
-	transition: transform 1s, opacity 1s;
+	/*transform: translateY(-100px);*/
+	/*opacity: 0;*/
+	/*transition: transform 1s, opacity 1s;*/
 }
 
 #about > div {
@@ -236,7 +236,63 @@ nav div ul li:hover {
 
 /* PORTFOLIO */
 
-.portfolio {
-	height: 150%;
+#portfolio {
 	background-color: #f5f5f5;
+}
+
+.project-overlay {
+	width: 430px;
+	height: 300px;
+	background-color: #fff;
+	margin-bottom: 30px;
+}
+
+.top-bar {
+	position: relative;
+	background-color: #2a2a2a;
+	height: 30px;
+}
+
+.top-bar h2 {
+	font-size: 90%;
+	color: #fff;
+	margin: 0;
+	text-align: center;
+	vertical-align: middle;
+	height: 100%;
+	text-transform: uppercase;
+	line-height: 2.1em;
+}
+
+.circle {
+	display: inline-block;
+	position: absolute;
+	width: 15px;
+	height: 15px;
+	border-radius: 50%;
+	background-color: #ffbd2e;
+	top: 8px;
+	left: 30px;
+}
+
+.circle::before {
+	left: -20px;
+	content: "";
+	background-color: #ff5f57;
+	width: 15px;
+	height: 15px;
+	border-radius: 50%;
+	display: inline-block;
+	position: absolute;
+}
+
+.circle::after {
+	left: 20px;
+	content: "";
+	background-color: #28ca41;
+	width: 15px;
+	height: 15px;
+	border-radius: 50%;
+	display: inline-block;
+	position: absolute;
 }
