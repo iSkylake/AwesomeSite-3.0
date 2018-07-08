@@ -20,8 +20,8 @@ window.onscroll = function(){
 function aboutAnimation(){
 	let progress = ["75%", "50%", "65%", "40%", "45%", "40%", "60%", "35%", "55%"];
 	// let seconds = 1;
-	// about.children[0].style.transform = "translateY(0)";
-	// about.children[0].style.opacity = 1;
+	about.children[0].style.transform = "translateY(0)";
+	about.children[0].style.opacity = 1;
 	about.children[1].style.transform = "translate(0)";
 	about.children[1].style.opacity = 1;
 	about.children[2].style.transform = "translate(0)";
