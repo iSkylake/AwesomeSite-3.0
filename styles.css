@@ -181,26 +181,26 @@ nav div ul li:hover {
 #about .section-title {
 	transform: translateY(-100px);
 	opacity: 0;
-	transition: transform 1s, opacity 1s;
+	transition: transform 1s, opacity 0.5s;
 }
 
 .about-me {
 	opacity: 0;
 	transform: translate(-100px);
-	transition: transform 1s, opacity 1s;
+	transition: transform 1s, opacity 0.5s;
 }
 
 .skill {
 	opacity: 0;
 	transform: translate(100px);
-	transition: transform 1s, opacity 1s;
+	transition: transform 1s, opacity 0.5s;
 }
 
 .skill-progression {
 	background-color: #00A1A7;
 	width: 0%;
 	height: 100%;
-	transition: 1s width ease-out 1s;
+	/*transition: 1s width ease-out 1s;*/
 }
 
 .skill div:nth-child(1) .skill-progression {
@@ -208,35 +208,35 @@ nav div ul li:hover {
 }
 
 .skill div:nth-child(2) .skill-progression {
-	transition: 1.05s width ease-out 1s;
-}
-
-.skill div:nth-child(3) .skill-progression {
 	transition: 1.1s width ease-out 1s;
 }
 
-.skill div:nth-child(4) .skill-progression {
-	transition: 1.15s width ease-out 1s;
-}
-
-.skill div:nth-child(5) .skill-progression {
+.skill div:nth-child(3) .skill-progression {
 	transition: 1.2s width ease-out 1s;
 }
 
-.skill div:nth-child(6) .skill-progression {
-	transition: 1.25s width ease-out 1s;
-}
-
-.skill div:nth-child(7) .skill-progression {
+.skill div:nth-child(4) .skill-progression {
 	transition: 1.3s width ease-out 1s;
 }
 
+.skill div:nth-child(5) .skill-progression {
+	transition: 1.4s width ease-out 1s;
+}
+
+.skill div:nth-child(6) .skill-progression {
+	transition: 1.5s width ease-out 1s;
+}
+
+.skill div:nth-child(7) .skill-progression {
+	transition: 1.6s width ease-out 1s;
+}
+
 .skill div:nth-child(8) .skill-progression {
-	transition: 1.35s width ease-out 1s;
+	transition: 1.7s width ease-out 1s;
 }
 
 .skill div:nth-child(9) .skill-progression {
-	transition: 1.4s width ease-out 1s;
+	transition: 1.8s width ease-out 1s;
 }
 
 /* PORTFOLIO */
@@ -339,35 +339,45 @@ nav div ul li:hover {
 
 #portfolio .section-title {
 	opacity: 0;
-	transition: opacity 1.5s;
+	transition: opacity 1s;
 }
 
 .project-overlay {
 	opacity: 0;
-	/*transform-origin: top;*/
 	transform: rotateX(45deg);
+	box-shadow: #636363 3px 6px 5px;
 }
 
 #portfolio > div:nth-child(2) {
-	transition: transform 1.5s 1s, opacity 1.5s 1s;;
+	transition: transform 1.1s 0.7s, opacity 1s 0.7s;
 }
 
 #portfolio > div:nth-child(3) {
-	transition: transform 1.5s 1.1s, opacity 1.5s 1.1s;
+	transition: transform 1.1s 0.8s, opacity 1s 0.8s;
 }
 
 #portfolio > div:nth-child(4) {
-	transition: transform 1.5s 1.2s, opacity 1.5s 1.2s;
+	transition: transform 1.1s 0.9s, opacity 1s 0.9s;
 }
 
 #portfolio > div:nth-child(5) {
-	transition: transform 1.5s 1.3s, opacity 1.5s 1.3s;
+	transition: transform 1.1s 1s, opacity 1s 1s;
 }
 
 #portfolio > div:nth-child(6) {
-	transition: transform 1.5s 1.4s, opacity 1.5s 1.4s;
+	transition: transform 1.1s 1.1s, opacity 1s 1.1s;
 }
 
 #portfolio > div:nth-child(7) {
-	transition: transform 1.5s 1.5s, opacity 1.5s 1.5s;
+	transition: transform 1.1s 1.2s, opacity 1s 1.2s;
+}
+
+/* CONTACT */
+
+#contact {
+	background-color: #252934;
+}
+
+#contact h1 {
+	color: #fff;
 }
