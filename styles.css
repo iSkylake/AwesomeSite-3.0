@@ -57,6 +57,8 @@ html, body {
 	transition: 0.4s color;
 }
 
+/* BOUNCING ANIMATION */
+
 @keyframes down-bounce {
 	0% {
 		bottom: 10%;
@@ -80,7 +82,7 @@ nav {
 	color: #ffffff;
 	font-size: 16px;
 	border-bottom: #04C2C9 solid 3px;
-	opacity: 0.9;
+	opacity: 0.98;
 	text-transform: uppercase;
 	z-index: 1000;
 }
@@ -132,7 +134,8 @@ nav div ul li:hover {
 
 #about > div {
 	/*width: 40%;*/
-	flex: 2;
+	width: 700px;
+	/*flex: 2;*/
 }
 
 .logo {
@@ -157,13 +160,19 @@ nav div ul li:hover {
 	color: #fff;
 }
 
+.skill {
+	display: flex;
+	flex-direction: column;
+	/*justify-content: space-evenly;*/
+	align-items: center;
+}
+
 .skill-bar {
 	display: flex;
 	background-color: #eee;
 	height: 30px;
 	width: 80%;
-	align-items: center;
-	margin: 15px 0;
+	margin: 7px 0;
 }
 
 .skill-name {
@@ -243,6 +252,7 @@ nav div ul li:hover {
 
 #portfolio {
 	background-color: #f5f5f5;
+	padding-bottom: 250px;
 }
 
 .project-overlay {
@@ -374,10 +384,55 @@ nav div ul li:hover {
 
 /* CONTACT */
 
+.diagonal {
+	width: 100%;
+	height: 120px;
+	background-color: #252934;
+	position: absolute;
+	transform: skewY(4deg) translateY(-40px);
+}
+
+.diagonal-reverse {
+	width: 100%;
+	height: 120px;
+	background-color: #252934;
+	position: absolute;
+	transform: skewY(-4deg) translateY(-40px);	
+}
+
 #contact {
 	background-color: #252934;
 }
 
 #contact h1 {
 	color: #fff;
+	margin-top: 0;
+}
+
+.contact-text {
+	color: #04C2C9;
+	font-size: 105%;
+	flex: 1 100%;
+	text-align: center;
+	line-height: 
+}
+
+.email-icon {
+	color: #fff;
+	background-color: #E31B6D;
+	font-size: 300%;
+	flex: 1;
+	text-align: center;
+	margin: 30px 0;
+	padding: 5px 7px;
+	border: 1px solid #E31B6D;
+	border-radius: 10px;
+}
+
+.social-icon {
+	margin: 15px 5px;
+	color: #fff;
+	background-color: #1B242F;
+	padding: 10px;
+	font-size: 150%;
 }
