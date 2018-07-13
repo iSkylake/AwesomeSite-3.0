@@ -114,6 +114,14 @@ nav div ul li:hover {
 	position: fixed;
 }
 
+.selected {
+	color: #E31B6D;
+}
+
+.navOption {
+	transition: 0.3s color;
+}
+
 /* ABOUT */
 
 .wrapper {
@@ -407,6 +415,7 @@ nav div ul li:hover {
 #contact h1 {
 	color: #fff;
 	margin-top: 0;
+	/*transform: translate(-400px);*/
 }
 
 .contact-text {
@@ -414,7 +423,7 @@ nav div ul li:hover {
 	font-size: 105%;
 	flex: 1 100%;
 	text-align: center;
-	line-height: 
+	line-height: 1.7;
 }
 
 .email-icon {

@@ -4,25 +4,41 @@ let about = document.getElementById('about');
 let skillProgression = document.getElementsByClassName('skill-progression');
 let portfolio = document.getElementById('portfolio');
 let projectOverlay = document.getElementsByClassName('project-overlay');
+let contact = document.getElementById('contact');
+let navOption = document.getElementsByClassName('navOption');
+let section = document.getElementsByTagName('section')
 
 // let documentScroll = document.documentElement || document.body;
 let navPosition = navBar.offsetTop;
 let portfolioPosition = portfolio.offsetTop - 20;
+let contactPosition = contact.offsetTop - 250;
 
 window.onscroll = function(){
 	if(window.pageYOffset >= navPosition){
 		navBar.classList.add('fixedNav');
 		about.style.paddingTop = "153px";
-		aboutAnimation();
 	} else {
 		navBar.classList.remove('fixedNav');
 		about.style.paddingTop = "90px";
 	}
 
-	if(window.pageYOffset >= portfolioPosition) {
+	clearNav();
+	if(window.pageYOffset >= contactPosition){
+		navOption[2].classList.add("selected");
+	} else if(window.pageYOffset >= portfolioPosition) {
+		navOption[1].classList.add("selected");
 		portfolioAnimation();
+	} else if(window.pageYOffset >= navPosition) {
+		aboutAnimation();
+		navOption[0].classList.add("selected");
 	}
 };
+
+function clearNav(){
+	for(let i=0; i<3; i++){
+		navOption[i].classList.remove("selected");
+	}
+}
 
 function aboutAnimation(){
 	let progress = ["75%", "50%", "65%", "40%", "45%", "40%", "60%", "35%", "55%"];
@@ -80,3 +96,24 @@ const scrollTo = function(to, duration) {
 
 downIcon.addEventListener('click', () => scrollTo(navPosition, 500));
 
+// Navbar jump function
+
+let cachedIdPosition = {};
+
+for(let i=0; i<section.length; i++){
+	let sectionId = section[i].id;
+	let sectionPosition = section[i].offsetTop;
+	cachedIdPosition[sectionId] = sectionPosition;
+}
+
+let sectionNodes = Array.prototype.slice.call(section);
+
+navBar.addEventListener('click', function(e){
+	if(e.target && e.target.nodeName === "LI" || e.target.nodeName === 'P'){
+		let sectionId = e.target.textContent.toLowerCase();
+		if(sectionId === "george yu"){
+			sectionId = "hero";
+		}
+		scrollTo(cachedIdPosition[sectionId], 500);
+	}
+});
