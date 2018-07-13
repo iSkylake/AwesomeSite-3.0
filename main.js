@@ -25,6 +25,7 @@ window.onscroll = function(){
 	clearNav();
 	if(window.pageYOffset >= contactPosition){
 		navOption[2].classList.add("selected");
+		contactAnimation();
 	} else if(window.pageYOffset >= portfolioPosition) {
 		navOption[1].classList.add("selected");
 		portfolioAnimation();
@@ -62,6 +63,25 @@ function portfolioAnimation(){
 		projectOverlay[i].style.transform = "rotateX(0deg)";
 		projectOverlay[i].style.opacity = 1;
 	}
+}
+
+function contactAnimation(){
+	let contactTitle = contact.children[0];
+	let emailText = contact.children[1];
+	let emailIcon = contact.children[2].children[0];
+	let socialText = contact.children[3];
+	let linkedinIcon = contact.children[4].children[0];
+	let githubIcon = contact.children[4].children[1];
+
+	contactTitle.style.opacity = 1;
+	contactTitle.style.transform = "translate(0)";
+	emailText.style.opacity = 1;
+	emailText.style.transform = "translate(0)";
+	emailIcon.style.transform = "scale(1)";
+	socialText.style.opacity = 1;
+	socialText.style.transform = "translate(0)";
+	linkedinIcon.style.transform = "scale(1)";
+	githubIcon.style.transform = "scale(1)";
 }
 
 const scrollTo = function(to, duration) {
