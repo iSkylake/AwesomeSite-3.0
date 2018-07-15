@@ -17,9 +17,11 @@ window.onscroll = function(){
 	if(window.pageYOffset >= navPosition){
 		navBar.classList.add('fixedNav');
 		about.style.paddingTop = "153px";
+		// downIcon.style.animation = '';
 	} else {
 		navBar.classList.remove('fixedNav');
 		about.style.paddingTop = "90px";
+		// downIcon.style.animation = "down-bounce 2s infinite";
 	}
 
 	clearNav();
@@ -44,12 +46,9 @@ function clearNav(){
 function aboutAnimation(){
 	let progress = ["75%", "50%", "65%", "40%", "45%", "40%", "60%", "35%", "55%"];
 	// let seconds = 1;
-	about.children[0].style.transform = "translateY(0)";
-	about.children[0].style.opacity = 1;
-	about.children[1].style.transform = "translate(0)";
-	about.children[1].style.opacity = 1;
-	about.children[2].style.transform = "translate(0)";
-	about.children[2].style.opacity = 1;
+	about.children[0].classList.add("slide-down");
+	about.children[1].classList.add("slide-left");
+	about.children[2].classList.add("slide-right");
 	for(let i=0; i<skillProgression.length; i++){
 		// seconds += 0.05;
 		skillProgression[i].style.width = progress[i];
@@ -73,15 +72,21 @@ function contactAnimation(){
 	let linkedinIcon = contact.children[4].children[0];
 	let githubIcon = contact.children[4].children[1];
 
-	contactTitle.style.opacity = 1;
-	contactTitle.style.transform = "translate(0)";
-	emailText.style.opacity = 1;
-	emailText.style.transform = "translate(0)";
-	emailIcon.style.transform = "scale(1)";
-	socialText.style.opacity = 1;
-	socialText.style.transform = "translate(0)";
-	linkedinIcon.style.transform = "scale(1)";
-	githubIcon.style.transform = "scale(1)";
+	contactTitle.classList.add("slide-right-far");
+	emailText.classList.add("slide-left-far");
+	emailIcon.classList.add("grow");	
+	socialText.classList.add("slide-right-far");
+	linkedinIcon.classList.add("grow");
+	githubIcon.classList.add("grow");
+	// contactTitle.style.opacity = 1;
+	// contactTitle.style.transform = "translate(0)";
+	// emailText.style.opacity = 1;
+	// emailText.style.transform = "translate(0)";
+	// emailIcon.style.transform = "scale(1)";
+	// socialText.style.opacity = 1;
+	// socialText.style.transform = "translate(0)";
+	// linkedinIcon.style.transform = "scale(1)";
+	// githubIcon.style.transform = "scale(1)";
 }
 
 const scrollTo = function(to, duration) {
