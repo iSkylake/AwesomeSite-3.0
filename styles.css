@@ -193,11 +193,6 @@ nav div ul li:hover {
 	/*height: 100%;*/
 }
 
-.skill-percent {
-	/*position: absolute;*/
-	/*right: 100px;*/
-}
-
 /* ABOUT ANIMATION */
 
 #about .section-title {
@@ -486,6 +481,14 @@ nav div ul li:hover {
 	border: 1px solid #E31B6D;
 	border-radius: 10px;
 	transform: scale(0);
+	transition: border-radius 0.5s, font-size 0.5s, padding 0.5s, margin 0.5s;
+}
+
+.email-icon:hover {
+	border-radius: 50%;
+	padding: 8px 10px;
+	margin: 27px 0;
+	font-size: 300%;
 }
 
 .social-icon {

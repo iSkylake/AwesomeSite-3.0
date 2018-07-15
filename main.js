@@ -67,10 +67,10 @@ function portfolioAnimation(){
 function contactAnimation(){
 	let contactTitle = contact.children[0];
 	let emailText = contact.children[1];
-	let emailIcon = contact.children[2].children[0];
+	let emailIcon = contact.children[2].children[0].children[0];
 	let socialText = contact.children[3];
-	let linkedinIcon = contact.children[4].children[0];
-	let githubIcon = contact.children[4].children[1];
+	let linkedinIcon = contact.children[4].children[0].children[0];
+	let githubIcon = contact.children[4].children[1].children[0];
 
 	contactTitle.classList.add("slide-right-far");
 	emailText.classList.add("slide-left-far");
@@ -78,15 +78,6 @@ function contactAnimation(){
 	socialText.classList.add("slide-right-far");
 	linkedinIcon.classList.add("grow");
 	githubIcon.classList.add("grow");
-	// contactTitle.style.opacity = 1;
-	// contactTitle.style.transform = "translate(0)";
-	// emailText.style.opacity = 1;
-	// emailText.style.transform = "translate(0)";
-	// emailIcon.style.transform = "scale(1)";
-	// socialText.style.opacity = 1;
-	// socialText.style.transform = "translate(0)";
-	// linkedinIcon.style.transform = "scale(1)";
-	// githubIcon.style.transform = "scale(1)";
 }
 
 const scrollTo = function(to, duration) {
