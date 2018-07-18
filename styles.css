@@ -498,6 +498,12 @@ nav div ul li:hover {
 	padding: 10px;
 	font-size: 150%;
 	transform: scale(0);
+	transition: color	0.3s, background-color 0.3s;
+}
+
+.social-icon:hover {
+	color: #1B242F;
+	background-color: #fff;
 }
 
 /* CONTACT ANIMATION */

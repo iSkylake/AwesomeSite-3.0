@@ -6,12 +6,12 @@ let portfolio = document.getElementById('portfolio');
 let projectOverlay = document.getElementsByClassName('project-overlay');
 let contact = document.getElementById('contact');
 let navOption = document.getElementsByClassName('navOption');
-let section = document.getElementsByTagName('section')
+let section = document.getElementsByTagName('section');
 
 // let documentScroll = document.documentElement || document.body;
 let navPosition = navBar.offsetTop;
 let portfolioPosition = portfolio.offsetTop - 20;
-let contactPosition = contact.offsetTop - 250;
+let contactPosition = contact.offsetTop - 280;
 
 window.onscroll = function(){
 	if(window.pageYOffset >= navPosition){
