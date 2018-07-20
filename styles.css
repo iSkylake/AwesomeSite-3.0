@@ -103,6 +103,7 @@ nav div ul {
 nav div ul li, nav div p {
 	padding: 3px 20px;
 	cursor: pointer;
+	transition: color 0.5s;
 }
 
 nav div ul li:hover {
