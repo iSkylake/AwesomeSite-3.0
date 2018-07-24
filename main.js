@@ -2,6 +2,7 @@ let navBar = document.getElementsByTagName('nav')[0];
 let downIcon = document.getElementsByClassName('down-icon')[0];
 let about = document.getElementById('about');
 let skillProgression = document.getElementsByClassName('skill-progression');
+let skillPercent = document.getElementsByClassName('skill-percent');
 let portfolio = document.getElementById('portfolio');
 let projectOverlay = document.getElementsByClassName('project-overlay');
 let contact = document.getElementById('contact');
@@ -44,7 +45,7 @@ function clearNav(){
 }
 
 function aboutAnimation(){
-	let progress = ["75%", "50%", "65%", "40%", "45%", "40%", "60%", "35%", "55%"];
+	let progress = ["72%", "60%", "65%", "40%", "55%", "40%", "60%", "35%", "55%"];
 	// let seconds = 1;
 	about.children[0].classList.add("slide-down");
 	about.children[1].classList.add("slide-left");
@@ -52,6 +53,7 @@ function aboutAnimation(){
 	for(let i=0; i<skillProgression.length; i++){
 		// seconds += 0.05;
 		skillProgression[i].style.width = progress[i];
+		skillPercent[i].style.opacity = 1;
 		// skillProgression[i].style.transitionDuration = seconds + "s";
 	}
 }
