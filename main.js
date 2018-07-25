@@ -45,7 +45,7 @@ function clearNav(){
 }
 
 function aboutAnimation(){
-	let progress = ["72%", "60%", "65%", "40%", "55%", "40%", "60%", "35%", "55%"];
+	let progress = ["72%", "60%", "65%", "35%", "45%", "35%", "60%", "25%", "45%"];
 	// let seconds = 1;
 	about.children[0].classList.add("slide-down");
 	about.children[1].classList.add("slide-left");
