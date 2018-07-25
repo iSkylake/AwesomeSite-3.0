@@ -12,7 +12,7 @@ let section = document.getElementsByTagName('section');
 // let documentScroll = document.documentElement || document.body;
 let navPosition = navBar.offsetTop;
 let portfolioPosition = portfolio.offsetTop - 20;
-let contactPosition = contact.offsetTop - 280;
+let contactPosition = contact.offsetTop - window.innerHeight + contact.clientHeight;
 
 window.onscroll = function(){
 	if(window.pageYOffset >= navPosition){
