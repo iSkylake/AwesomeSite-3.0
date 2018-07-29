@@ -144,13 +144,15 @@ nav div ul li:hover {
 }
 
 .logo {
-	width: 253px;
+	width: 250px;
+	height: 250px;
+	box-sizing: border-box;
 	font-size: 100px;
+	line-height: 250px;
 	font-weight: bold;
-	color: #E31B6D;
-	border: 5px solid #04C2C9;
+	text-align: center;
+	color: #FFF;
 	border-radius: 50%;
-	padding: 65px 10px;
 	background-color: #353c47;
 	margin: 0 auto;
 }
