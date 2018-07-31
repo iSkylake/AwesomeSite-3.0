@@ -11,30 +11,34 @@ let section = document.getElementsByTagName('section');
 
 // let documentScroll = document.documentElement || document.body;
 let navPosition = navBar.offsetTop;
+let aboutPosition = about.offsetTop;
 let portfolioPosition = portfolio.offsetTop - 20;
 let contactPosition = contact.offsetTop - window.innerHeight + contact.clientHeight;
 
 window.onscroll = function(){
 	if(window.pageYOffset >= navPosition){
 		navBar.classList.add('fixedNav');
-		about.style.paddingTop = "153px";
 		// downIcon.style.animation = '';
 	} else {
 		navBar.classList.remove('fixedNav');
-		about.style.paddingTop = "90px";
 		// downIcon.style.animation = "down-bounce 2s infinite";
 	}
 
 	clearNav();
 	if(window.pageYOffset >= contactPosition){
 		navOption[2].classList.add("selected");
-		contactAnimation();
-	} else if(window.pageYOffset >= portfolioPosition) {
+	} else if(window.pageYOffset >= portfolioPosition){
 		navOption[1].classList.add("selected");
-		portfolioAnimation();
-	} else if(window.pageYOffset >= navPosition) {
-		aboutAnimation();
+	} else if(window.pageYOffset >= aboutPosition){
 		navOption[0].classList.add("selected");
+	}
+
+	if(window.pageYOffset >= contactPosition){
+		contactAnimation();
+	} else if(window.pageYOffset >= portfolioPosition - window.innerHeight/2) {
+		portfolioAnimation();
+	} else if(window.pageYOffset >= aboutPosition - window.innerHeight/2){
+		aboutAnimation();
 	}
 };
 

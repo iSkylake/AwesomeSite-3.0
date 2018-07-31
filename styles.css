@@ -71,7 +71,7 @@ html, body {
 /* NAV */
 
 nav {
-	position: relative;
+	position: absolute;
 	width: 100%;
 	display: flex;
 	justify-content: space-between;
@@ -121,6 +121,10 @@ nav div ul li:hover {
 
 /* ABOUT */
 
+#about {
+	padding-top: 153px;
+}
+
 .wrapper {
 	display: flex;
 	width: 100%;
@@ -144,14 +148,15 @@ nav div ul li:hover {
 }
 
 .logo {
-	width: 250px;
-	height: 250px;
+	width: 290px;
+	height: 290px;
 	box-sizing: border-box;
-	font-size: 100px;
-	line-height: 250px;
+	font-size: 700%;
+	line-height: 270px;
 	font-weight: bold;
 	text-align: center;
 	color: #FFF;
+	/*border: 5px #04C2C9 solid;*/
 	border-radius: 50%;
 	background-color: #353c47;
 	margin: 0 auto;
