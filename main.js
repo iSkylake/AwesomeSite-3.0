@@ -35,7 +35,7 @@ window.onscroll = function(){
 
 	if(window.pageYOffset >= contactPosition){
 		contactAnimation();
-	} else if(window.pageYOffset >= portfolioPosition - window.innerHeight/2) {
+	} else if(window.pageYOffset >= portfolioPosition - window.innerHeight/2){
 		portfolioAnimation();
 	} else if(window.pageYOffset >= aboutPosition - window.innerHeight/2){
 		aboutAnimation();
@@ -65,8 +65,9 @@ function aboutAnimation(){
 function portfolioAnimation(){
 	portfolio.children[0].style.opacity = 1;
 	for(let i=0; i<projectOverlay.length; i++){
-		projectOverlay[i].style.transform = "rotateX(0deg)";
-		projectOverlay[i].style.opacity = 1;
+		// projectOverlay[i].style.transform = "rotateX(0deg)";
+		// projectOverlay[i].style.opacity = 1;
+		projectOverlay[i].classList.add('move-up-animation');
 	}
 }
 
