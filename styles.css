@@ -360,8 +360,9 @@ nav div ul li:hover {
 }
 
 .project-overlay {
-	width: 430px;
-	height: 290px;
+	width: 500px;
+	/*height: 290px;*/
+	height: calc(500px * 67.44 / 100);
 	margin-bottom: 30px;
 	opacity: 0;
 	box-shadow: #636363 3px 6px 5px;
@@ -523,6 +524,8 @@ nav div ul li:hover {
 
 #contact {
 	background-color: #252934;
+	height: 600px;
+	box-sizing: border-box;
 }
 
 #contact h1 {
@@ -562,8 +565,12 @@ nav div ul li:hover {
 	color: #E31B6D;
 }
 
-.social-icon {
+.icon-wrapper a {
 	margin: 15px 5px;
+	text-decoration: none;
+}
+
+.social-icon {
 	color: #fff;
 	background-color: #1B242F;
 	padding: 10px;
