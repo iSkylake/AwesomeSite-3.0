@@ -5,6 +5,10 @@ html, body {
 	font-family: 'Open Sans', sans-serif;
 }
 
+a {
+	text-decoration: none;
+}
+
 #container {
 	width: 100%;
 }
@@ -366,12 +370,14 @@ nav div ul li:hover {
 	margin-bottom: 30px;
 	opacity: 0;
 	box-shadow: #636363 3px 6px 5px;
+	background-color: #2b2c2d;
 }
 
 .top-bar {
 	position: relative;
 	background-color: #2a2a2a;
 	height: 30px;
+	transition: opacity 0.35s;
 }
 
 .top-bar h2 {
@@ -425,6 +431,74 @@ nav div ul li:hover {
 	background-repeat: no-repeat;
 	border: 4px #2a2a2a solid;
 	border-top: none;
+	transition: opacity 0.35s;
+	/*opacity: 0;*/
+}
+
+.project-overlay:hover .app, .project-overlay:hover .top-bar {
+	opacity: 0;
+}
+
+.project-overlay:hover .app-info, .project-overlay:hover .app-button-wrapper{
+	opacity: 1;
+	z-index: 10;
+}
+
+.project-overlay:hover .app-info {
+	transform: translate(-50%, -30%);
+	top: 30%;
+}
+
+.project-overlay:hover .app-button-wrapper {
+	transform: translate(-50%, -20%);
+	bottom: 20%;	
+}
+
+.app-info {
+	top: 10%;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	text-align: center;
+	opacity: 0;
+	transition: 0.35s transform, 0.35s top;
+}
+
+.app-name {
+	color: #FFF;
+	font-size: 150%;
+	display: block;
+	font-weight: bold;
+	line-height: 2;
+}
+
+.app-stack {
+	/*color: #E31B6D;*/
+	color: #04C2C9;
+	/*color: #FFF;*/
+	font-size: 120%;
+	margin: 0 auto;
+}
+
+.app-button-wrapper {
+	position: absolute;
+	bottom: 10%;
+	left: 50%;
+	transform: translate(-50%, 10%);
+	opacity: 0;
+	transition: transform 0.35s, bottom 0.35s;
+}
+
+.app-button {
+	letter-spacing: 1px;
+	color: #FFF;
+	border: 3px solid #E31B6D;
+	padding: 10px;
+	transition: background-color 0.2s;
+}
+
+.app-button:hover {
+	background-color: #E31B6D;
 }
 
 #codeguide {
@@ -567,7 +641,6 @@ nav div ul li:hover {
 
 .icon-wrapper a {
 	margin: 15px 5px;
-	text-decoration: none;
 }
 
 .social-icon {
@@ -630,7 +703,7 @@ nav div ul li:hover {
 
 @keyframes slideRightFar {
 	0% {
-		transform: translate(-300px);
+		transform: translate(-150px);
 		opacity: 0;
 	}
 
@@ -643,7 +716,7 @@ nav div ul li:hover {
 @keyframes slideLeftFar {
 	0% {
 		opacity: 0;
-		transform: translate(300px);
+		transform: translate(150px);
 	}
 
 	100% {
@@ -661,5 +734,11 @@ nav div ul li:hover {
 	100% {
 		opacity: 1;
 		transform: scale(1);
+	}
+}
+
+@media only screen and (max-width: 800px) {
+	#hero {
+		background-size: auto;
 	}
 }
