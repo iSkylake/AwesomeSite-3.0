@@ -371,6 +371,7 @@ nav div ul li:hover {
 	opacity: 0;
 	box-shadow: #636363 3px 6px 5px;
 	background-color: #2b2c2d;
+	position: relative;
 }
 
 .top-bar {
