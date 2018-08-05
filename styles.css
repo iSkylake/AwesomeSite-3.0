@@ -18,7 +18,8 @@ a {
 	width: 100%;
 	justify-content: space-around;
 	flex-flow: row wrap;
-	padding: 90px 0;
+	padding: 90px 5%;
+	box-sizing: border-box;
 }
 
 /* HERO IMAGE */
@@ -379,9 +380,9 @@ nav div ul li:hover {
 }
 
 .project-overlay {
-	width: 500px;
+	width: 450px;
 	/*height: 290px;*/
-	height: calc(500px * 67.44 / 100);
+	height: calc(450px * 67.44 / 100);
 	margin-bottom: 30px;
 	opacity: 0;
 	box-shadow: #636363 3px 6px 5px;
@@ -753,8 +754,9 @@ nav div ul li:hover {
 	}
 }
 
-@media only screen and (max-width: 800px) {
-	#hero {
-		background-size: auto;
+@media only screen and (min-width: 1920px) {
+	.project-overlay {
+		width: 490px;
+		height: calc(490px * 67.44 / 100);
 	}
 }
