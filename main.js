@@ -1,7 +1,7 @@
 let navBar = document.getElementsByTagName('nav')[0];
 let downIcon = document.getElementsByClassName('down-icon')[0];
 let about = document.getElementById('about');
-let ability = document.getElementsByClassName('ability-wrap');
+let trait = document.getElementsByClassName('trait-wrap');
 let skillProgression = document.getElementsByClassName('skill-progression');
 let skillPercent = document.getElementsByClassName('skill-percent');
 let portfolio = document.getElementById('portfolio');
@@ -55,9 +55,9 @@ function aboutAnimation(){
 	about.children[0].classList.add("slide-down");
 	about.children[2].classList.add("slide-left");
 	about.children[3].classList.add("slide-right");
-	for(let i=0; i<ability.length; i++){
-		ability[i].style.opacity = 1;
-		ability[i].style.transform = "rotateX(0)";
+	for(let i=0; i<trait.length; i++){
+		trait[i].style.opacity = 1;
+		trait[i].style.transform = "rotateX(0)";
 	}
 	for(let i=0; i<skillProgression.length; i++){
 		// seconds += 0.05;
