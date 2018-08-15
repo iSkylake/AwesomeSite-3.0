@@ -120,9 +120,10 @@ nav div ul li:hover {
 	color: #E31B6D;
 }
 
-.fixedNav {
+.fixed-nav {
 	top: 0;
 	position: fixed;
+	overflow: hidden;
 }
 
 .selected {
@@ -197,6 +198,7 @@ nav div ul li:hover {
 	flex-direction: row;
 	justify-content: center;
 	margin-bottom: 100px;
+	flex-wrap: wrap;
 }
 
 .traits-wrapper {
@@ -231,6 +233,7 @@ nav div ul li:hover {
 	font-size: 1.1rem;
 	color: #616161;
 	font-weight: 700;
+	text-align: center;
 }
 
 .about-wrap {
@@ -717,8 +720,8 @@ nav div ul li:hover {
 
 #contact {
 	background-color: #252934;
-	height: 600px;
-	box-sizing: border-box;
+/*	height: 600px;
+	box-sizing: border-box;*/
 }
 
 #contact h1 {
@@ -769,6 +772,7 @@ nav div ul li:hover {
 	font-size: 150%;
 	transform: scale(0);
 	transition: color	0.3s, background-color 0.3s;
+	margin-top: 20px;
 }
 
 .social-icon:hover {
@@ -860,5 +864,143 @@ nav div ul li:hover {
 	.project-overlay {
 		width: 490px;
 		height: calc(490px * 67.44 / 100);
+	}
+}
+
+/* MOBILE DEVICES */
+
+@media only screen and (max-width: 500px) {
+	.introduction {
+		font-size: 1rem;
+	}
+
+	.nav-right {
+		display: none;
+	}
+
+	.section-title {
+		font-size: 1.8rem;
+	}
+
+	.traits {
+		margin-bottom: 30px;
+	}
+
+	.traits-wrapper {
+		width: 80%;
+	}
+
+	.trait-wrap {
+		width: 40%;
+		margin-bottom: 30px;
+	}
+
+	.trait-icon {
+		width: 70px;
+		height: 70px;
+		line-height: 70px;
+		font-size: 2rem;
+	}
+
+	.about-wrap {
+		width: 95%;
+	}
+
+	.about-me {
+		margin-bottom: 40px;
+	}
+
+	.about-me p, .about-me h1 {
+		width: 90%;
+	}
+
+	.about-me h1 {
+		font-size: 1.5rem;
+	}
+
+	.about-me p {
+		font-size: 0.8rem;
+	}
+
+	.logo {
+		width: 200px;
+		height: 200px;
+		line-height: 190px;
+		font-size: 4.5rem;
+	}
+
+	.skill-bar {
+		height: 20px;
+	}
+
+	.skill-name {
+		font-size: 0.5rem;
+		line-height: 1.4;
+	}
+
+	.skill-percent {
+		font-size: 50%;
+	}
+
+
+	.project-overlay {
+	width: 300px;
+	height: calc(300px * 67.44 / 100);
+	}
+
+	.top-bar {
+		height: 20px;
+	}
+
+	.top-bar h2 {
+		font-size: 40%;
+	}
+
+	.circle {
+		width: 7px;
+		height: 7px;
+		top: 6px;
+		left: 15px;
+	}
+
+	.circle::before {
+		width: 7px;
+		height: 7px;
+		left: -10px;
+	}
+
+	.circle::after {
+		width: 7px;
+		height: 7px;
+		left: 10px;
+	}
+
+	.app {
+		height: calc(100% - 22px);
+	}
+
+	.app-name {
+		font-size: 100%;
+	}
+
+	.app-stack {
+		font-size: 70%;
+	}
+
+	.app-button {
+		font-size: 8px;
+		padding: 7px
+	}
+
+/*	#contact .section-title {
+		margin-bottom: 50px;
+	}*/
+
+	.contact-text {
+		font-size: 0.7rem;
+	}
+
+	.email-icon {
+		font-size: 2.5rem;
 	}
 }

@@ -18,10 +18,10 @@ let contactPosition = contact.offsetTop - window.innerHeight + contact.clientHei
 
 window.onscroll = function(){
 	if(window.pageYOffset >= navPosition){
-		navBar.classList.add('fixedNav');
+		navBar.classList.add('fixed-nav');
 		// downIcon.style.animation = '';
 	} else {
-		navBar.classList.remove('fixedNav');
+		navBar.classList.remove('fixed-nav');
 		// downIcon.style.animation = "down-bounce 2s infinite";
 	}
 
