@@ -857,6 +857,7 @@ nav div ul li:hover {
 		position: fixed;
 		border-bottom: none;
 		justify-content: center;
+		opacity: 1;
 	}
 
 	.nav-left {
