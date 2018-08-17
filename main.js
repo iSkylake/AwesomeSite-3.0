@@ -146,5 +146,7 @@ navBar.addEventListener('click', function(e){
 			sectionId = "hero";
 		}
 	}
-	scrollTo(cachedIdPosition[sectionId], 500);
+	if(sectionId){
+		scrollTo(cachedIdPosition[sectionId], 500);
+	}
 });

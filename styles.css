@@ -1,3 +1,8 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
 html, body {
 	margin: 0;
 	padding: 0;
@@ -111,7 +116,7 @@ nav div ul {
 }
 
 nav div ul li, nav div p {
-	padding: 3px 20px;
+	padding: 19px 20px;
 	cursor: pointer;
 	transition: color 0.5s;
 }
@@ -845,6 +850,7 @@ nav div ul li:hover {
 	.mobile-top-bar {
 		display: flex;
 		position: fixed;
+		font-size: 0.8rem;
 	}
 
 	.mobile-top-bar .nav-left{
