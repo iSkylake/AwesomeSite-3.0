@@ -133,48 +133,15 @@ nav div ul li:hover {
 .navOption {
 }
 
-/* MOBILE DROPDOWB */
+.nav-icon {
+	display: none;
+}
 
-.mobile-dropdown {
-	width: 100%;
-	height: 100%;
-	background-color: #1B242F;
-	position: absolute;
+/* MOBILE TOP BAR */
+
+.mobile-top-bar {
+	display: none;
 	top: 0;
-	color: #FFF;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: space-around;
-}
-
-.mobile-logo {
-	height: 80px;
-	width: 80px;
-	box-sizing: border-box;
-	background-color: #212c3a;
-	border-radius: 50%;
-	font-size: 1.5em;
-	text-align: center;
-	line-height: 80px;
-}
-
-.mobile-dropdown ul {
-	list-style-type: none;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-around;
-	height: 30%;
-	align-items: center;
-	padding-left: 0;
-}
-
-.mobile-dropdown ul li {
-
-}
-
-.mobile-dropdown .mobile-social a i{
-	transform: scale(1);
 }
 
 /* ABOUT */
@@ -241,6 +208,10 @@ nav div ul li:hover {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+}
+
+.about-me {
+	margin-bottom: 40px;
 }
 
 .logo {
@@ -510,7 +481,7 @@ nav div ul li:hover {
 	vertical-align: middle;
 	height: 100%;
 	text-transform: uppercase;
-	line-height: 2.1em;
+	line-height: 2;
 }
 
 .circle {
@@ -870,12 +841,49 @@ nav div ul li:hover {
 /* MOBILE DEVICES */
 
 @media only screen and (max-width: 500px) {
-	.introduction {
-		font-size: 1rem;
+
+	.mobile-top-bar {
+		display: flex;
+		position: fixed;
 	}
 
-	.nav-right {
+	.mobile-top-bar .nav-left{
+		display: block;
+	}
+
+	.navbar {
+		top: auto;
+		bottom: 0;
+		position: fixed;
+		border-bottom: none;
+		justify-content: center;
+	}
+
+	.nav-left {
 		display: none;
+	}
+
+	.nav-right ul {
+		padding-left: 0;
+		margin: 0;
+	}
+
+	.nav-right ul li {
+		padding: 10px 20px;
+	}
+
+	.nav-icon {
+		display: block;
+		text-align: center;
+	}
+
+	.nav-text {
+		display: block;
+		font-size: 8px;
+	}
+
+	#container {
+		margin-bottom: 40px;
 	}
 
 	.section-title {
@@ -904,10 +912,6 @@ nav div ul li:hover {
 
 	.about-wrap {
 		width: 95%;
-	}
-
-	.about-me {
-		margin-bottom: 40px;
 	}
 
 	.about-me p, .about-me h1 {
@@ -942,6 +946,34 @@ nav div ul li:hover {
 		font-size: 50%;
 	}
 
+	.contact-text {
+		font-size: 0.7rem;
+	}
+
+	.email-icon {
+		font-size: 2.5rem;
+	}
+
+	.email-icon:hover {
+	}
+}
+
+@media only screen and (max-width: 900px) {
+
+	.introduction {
+		font-size: 1rem;
+	}
+
+	.trait-icon {
+		width: 90px;
+		height: 90px;
+		line-height: 90px;
+		font-size: 2.5rem;
+	}
+
+	.trait-name {
+		font-size: 0.9rem;
+	}
 
 	.project-overlay {
 	width: 300px;
@@ -954,6 +986,7 @@ nav div ul li:hover {
 
 	.top-bar h2 {
 		font-size: 40%;
+		line-height: 3;
 	}
 
 	.circle {
@@ -990,20 +1023,5 @@ nav div ul li:hover {
 	.app-button {
 		font-size: 8px;
 		padding: 7px
-	}
-
-/*	#contact .section-title {
-		margin-bottom: 50px;
-	}*/
-
-	.contact-text {
-		font-size: 0.7rem;
-	}
-
-	.email-icon {
-		font-size: 2.5rem;
-	}
-
-	.email-icon:hover {
 	}
 }

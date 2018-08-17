@@ -1,4 +1,4 @@
-let navBar = document.getElementsByTagName('nav')[0];
+let navBar = document.getElementsByClassName('navbar')[0];
 let downIcon = document.getElementsByClassName('down-icon')[0];
 let about = document.getElementById('about');
 let trait = document.getElementsByClassName('trait-wrap');
@@ -134,14 +134,17 @@ for(let i=0; i<section.length; i++){
 	cachedIdPosition[sectionId] = sectionPosition;
 }
 
-let sectionNodes = Array.prototype.slice.call(section);
+// let sectionNodes = Array.prototype.slice.call(section);
 
 navBar.addEventListener('click', function(e){
-	if(e.target && e.target.nodeName === "LI" || e.target.nodeName === 'P'){
-		let sectionId = e.target.textContent.toLowerCase();
+	let sectionId;
+	if(e.target && e.target.nodeName === "I") {
+		sectionId = e.target.nextSibling.textContent.toLowerCase();
+	} else if(e.target && e.target.nodeName === "LI" || e.target.nodeName === 'P' || e.target.nodeName === "SPAN"){
+		sectionId = e.target.textContent.toLowerCase();
 		if(sectionId === "george yu"){
 			sectionId = "hero";
 		}
-		scrollTo(cachedIdPosition[sectionId], 500);
 	}
+	scrollTo(cachedIdPosition[sectionId], 500);
 });
