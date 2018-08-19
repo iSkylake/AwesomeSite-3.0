@@ -109,6 +109,9 @@ nav div {
 nav div ul {
 	list-style-type: none;
 	display: flex;
+}
+
+nav div ul li {
 	cursor: pointer;
 }
 
