@@ -106,18 +106,14 @@ nav div {
 	margin: 0 20px;
 }
 
-nav div p {
-	/*color: #E31B6D;*/
-}
-
 nav div ul {
 	list-style-type: none;
 	display: flex;
+	cursor: pointer;
 }
 
 nav div ul li, nav div p {
 	padding: 19px 20px;
-	cursor: pointer;
 	transition: color 0.5s;
 }
 
@@ -232,6 +228,7 @@ nav div ul li:hover {
 	border-radius: 50%;
 	background-color: #2a3749;
 	margin: 0 auto;
+	margin-bottom: 30px;
 }
 
 .about-me p, .logo + h1{
@@ -855,6 +852,10 @@ nav div ul li:hover {
 
 	.mobile-top-bar .nav-left{
 		display: block;
+	}
+
+	.nav-left p {
+		padding: 15px;
 	}
 
 	.navbar {

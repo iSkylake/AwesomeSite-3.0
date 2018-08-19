@@ -27,10 +27,12 @@ window.onscroll = function(){
 
 	clearNav();
 	if(window.pageYOffset >= contactPosition){
-		navOption[2].classList.add("selected");
+		navOption[3].classList.add("selected");
 	} else if(window.pageYOffset >= portfolioPosition){
-		navOption[1].classList.add("selected");
+		navOption[2].classList.add("selected");
 	} else if(window.pageYOffset >= aboutPosition){
+		navOption[1].classList.add("selected");
+	} else if(window.pageXOffset < aboutPosition){
 		navOption[0].classList.add("selected");
 	}
 
@@ -44,7 +46,7 @@ window.onscroll = function(){
 };
 
 function clearNav(){
-	for(let i=0; i<3; i++){
+	for(let i=0; i<4; i++){
 		navOption[i].classList.remove("selected");
 	}
 }
@@ -140,11 +142,11 @@ navBar.addEventListener('click', function(e){
 	let sectionId;
 	if(e.target && e.target.nodeName === "I") {
 		sectionId = e.target.nextSibling.textContent.toLowerCase();
-	} else if(e.target && e.target.nodeName === "LI" || e.target.nodeName === 'P' || e.target.nodeName === "SPAN"){
+	} else if(e.target && e.target.nodeName === "LI" || e.target.nodeName === "SPAN"){
 		sectionId = e.target.textContent.toLowerCase();
-		if(sectionId === "george yu"){
-			sectionId = "hero";
-		}
+	}
+	if(sectionId === "home"){
+		sectionId = "hero";
 	}
 	if(sectionId){
 		scrollTo(cachedIdPosition[sectionId], 500);
