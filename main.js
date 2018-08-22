@@ -72,8 +72,6 @@ function aboutAnimation(){
 function portfolioAnimation(){
 	portfolio.children[0].style.opacity = 1;
 	for(let i=0; i<projectOverlay.length; i++){
-		// projectOverlay[i].style.transform = "rotateX(0deg)";
-		// projectOverlay[i].style.opacity = 1;
 		projectOverlay[i].classList.add('move-up-animation');
 	}
 }
@@ -124,7 +122,7 @@ const scrollTo = function(to, duration) {
 	animateScroll();
 };
 
-downIcon.addEventListener('click', () => scrollTo(navPosition, 500));
+downIcon.addEventListener('click', () => scrollTo(aboutPosition, 500));
 
 // Navbar jump function
 
