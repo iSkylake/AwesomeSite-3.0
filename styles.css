@@ -29,7 +29,7 @@ a {
 
 /* HERO IMAGE */
 
-#hero {
+#home {
 	background: url("img/Hero3.jpeg");
 	background-attachment: fixed;
 	background-position: center;
@@ -53,7 +53,7 @@ a {
 	color: #E31B6D; /* Crimson red */
 }
 
-#hero i {
+#home i {
 	font-size: 45px;
 	position: absolute;
 	text-align: center;
@@ -67,7 +67,7 @@ a {
 	cursor: pointer;
 }
 
-#hero i:hover {
+#home i:hover {
 	color: #04C2C9; /* Aqua marine */
 	transition: 0.4s color;
 }
@@ -1107,5 +1107,5 @@ nav div ul li:hover {
 			transform: translate(0);
 		}
 	}
-	
+
 }

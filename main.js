@@ -17,7 +17,7 @@ let portfolioPosition = portfolio.offsetTop - 20;
 let contactPosition = contact.offsetTop - window.innerHeight/2;
 
 window.onscroll = function(){
-	if(window.pageYOffset >= navPosition){
+	if(window.pageYOffset >= navBar.offsetTop){
 		navBar.classList.add('fixed-nav');
 		// downIcon.style.animation = '';
 	} else {
@@ -26,21 +26,21 @@ window.onscroll = function(){
 	}
 
 	clearNav();
-	if(window.pageYOffset >= contactPosition){
+	if(window.pageYOffset >= contact.offsetTop - window.innerHeight/2){
 		navOption[3].classList.add("selected");
-	} else if(window.pageYOffset >= portfolioPosition){
+	} else if(window.pageYOffset >= portfolio.offsetTop - 20){
 		navOption[2].classList.add("selected");
-	} else if(window.pageYOffset >= aboutPosition){
+	} else if(window.pageYOffset >= about.offsetTop){
 		navOption[1].classList.add("selected");
-	} else if(window.pageXOffset < aboutPosition){
+	} else if(window.pageXOffset < about.offsetTop){
 		navOption[0].classList.add("selected");
 	}
 
-	if(window.pageYOffset >= contactPosition){
+	if(window.pageYOffset >= contact.offsetTop - window.innerHeight/2){
 		contactAnimation();
-	} else if(window.pageYOffset >= portfolioPosition - window.innerHeight/2){
+	} else if(window.pageYOffset >= portfolio.offsetTop - 20 - window.innerHeight/2){
 		portfolioAnimation();
-	} else if(window.pageYOffset >= aboutPosition - window.innerHeight/2){
+	} else if(window.pageYOffset >= about.offsetTop - window.innerHeight/2){
 		aboutAnimation();
 	}
 };
@@ -122,31 +122,35 @@ const scrollTo = function(to, duration) {
 	animateScroll();
 };
 
-downIcon.addEventListener('click', () => scrollTo(aboutPosition, 500));
+downIcon.addEventListener('click', () => scrollTo(about.offsetTop, 500));
 
 // Navbar jump function
 
-let cachedIdPosition = {};
+// let cachedIdPosition = {
+// 	"home" : 0,
+// 	"about": about.offsetTop,
+// 	"portfolio": portfolio.offsetTop,
+// 	"contact": contact.offsetTop
+// };
 
-for(let i=0; i<section.length; i++){
-	let sectionId = section[i].id;
-	let sectionPosition = section[i].offsetTop;
-	cachedIdPosition[sectionId] = sectionPosition;
-}
+// for(let i=0; i<section.length; i++){
+// 	let sectionId = section[i].id;
+// 	let sectionPosition = section[i].offsetTop;
+// 	cachedIdPosition[sectionId] = sectionPosition;
+// }
 
 // let sectionNodes = Array.prototype.slice.call(section);
 
 navBar.addEventListener('click', function(e){
 	let sectionId;
+	let position;
 	if(e.target && e.target.nodeName === "I") {
 		sectionId = e.target.nextSibling.textContent.toLowerCase();
 	} else if(e.target && e.target.nodeName === "LI" || e.target.nodeName === "SPAN"){
 		sectionId = e.target.textContent.toLowerCase();
 	}
-	if(sectionId === "home"){
-		sectionId = "hero";
-	}
 	if(sectionId){
-		scrollTo(cachedIdPosition[sectionId], 500);
+		position = document.getElementById(sectionId).offsetTop;
+		scrollTo(position, 500);
 	}
 });
