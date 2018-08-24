@@ -17,7 +17,7 @@ let portfolioPosition = portfolio.offsetTop - 20;
 let contactPosition = contact.offsetTop - window.innerHeight/2;
 
 window.onscroll = function(){
-	if(window.pageYOffset >= navBar.offsetTop){
+	if(window.pageYOffset >= about.offsetTop){
 		navBar.classList.add('fixed-nav');
 		// downIcon.style.animation = '';
 	} else {
