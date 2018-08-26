@@ -1,3 +1,8 @@
+@font-face {
+	font-family: 'Open Sans';
+	src: url(fonts/OpenSans-Regular.ttf);
+}
+
 * {
 	margin: 0;
 	padding: 0;
@@ -30,7 +35,7 @@ a {
 /* HERO IMAGE */
 
 #home {
-	background: url("img/Hero3.jpeg");
+	background: url("../img/Hero3.jpeg");
 	background-attachment: fixed;
 	background-position: center;
 	background-size: cover;
@@ -600,27 +605,27 @@ nav div ul li:hover {
 }
 
 #codeguide {
-	background-image: url("img/Codeguide.png");
+	background-image: url("../img/Codeguide.png");
 }
 
 #hearthstone {
-	background-image: url("img/Hearthstone2.png");
+	background-image: url("../img/Hearthstone2.png");
 }
 
 #quickquiz {
-	background-image: url("img/Quickquiz.png");
+	background-image: url("../img/Quickquiz.png");
 }
 
 #blackhack {
-	background-image: url("img/Blackhack.png");
+	background-image: url("../img/Blackhack.png");
 }
 
 #world-cup-memory {
-	background-image: url("img/WorldCupMemory.png");
+	background-image: url("../img/WorldCupMemory.png");
 }
 
 #math4kids {
-	background-image: url("img/Math4Kids.png");
+	background-image: url("../img/Math4Kids.png");
 }
 
 /* PROJECT ANIMATION */
