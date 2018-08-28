@@ -154,3 +154,17 @@ navBar.addEventListener('click', function(e){
 		scrollTo(position, 500);
 	}
 });
+
+// MacOS and iOS line-height temporal fix
+let topBar = document.getElementsByClassName('top-bar');
+
+let isMac = navigator.platform.match(/(Mac|iPhone|iPod|iPad)/i)?true:false;
+let isIOS = navigator.platform.match(/(iPhone|iPod|iPad)/i)?true:false;
+
+console.log(isMac);
+
+if(isIOS || isMac){
+	for(let i=0; i<topBar.length; i++){
+		topBar[i].children[1].style.lineHeight = 2;
+	}
+}
