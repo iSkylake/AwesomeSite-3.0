@@ -166,3 +166,10 @@ if(isIOS || isMac){
 		topBar[i].children[1].style.lineHeight = 2;
 	}
 }
+
+let home = document.getElementById('home');
+
+if(isIOS){
+	home.style.backgroundAttachment = 'scroll';
+	home.style.backgroundSize = 'cover';
+}
