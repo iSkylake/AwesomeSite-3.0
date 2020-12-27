@@ -51,8 +51,13 @@ function clearNav(){
 	}
 }
 
+function getPercent(percent) {
+	const newPercent = Math.trunc((percent*78)/100);
+	return `${newPercent}%`;
+}
+
 function aboutAnimation(){
-	let progress = ["72%", "60%", "65%", "35%", "45%", "35%", "60%", "25%", "45%"];
+	let progress = ["90", "70", "85", "70", "65", "60", "80", "45", "55"];
 	// let seconds = 1;
 	about.children[0].classList.add("slide-down");
 	about.children[2].classList.add("slide-left");
@@ -63,7 +68,7 @@ function aboutAnimation(){
 	}
 	for(let i=0; i<skillProgression.length; i++){
 		// seconds += 0.05;
-		skillProgression[i].style.width = progress[i];
+		skillProgression[i].style.width = getPercent(progress[i]);
 		skillPercent[i].style.opacity = 1;
 		// skillProgression[i].style.transitionDuration = seconds + "s";
 	}
